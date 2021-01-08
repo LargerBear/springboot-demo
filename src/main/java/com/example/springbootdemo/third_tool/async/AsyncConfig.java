@@ -1,4 +1,4 @@
-package com.example.springbootdemo.async;
+package com.example.springbootdemo.third_tool.async;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.example.springbootdemo.async;
+package com.example.springbootdemo.third_tool.async;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;

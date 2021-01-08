@@ -1,4 +1,4 @@
-package com.example.springbootdemo.kafka;
+package com.example.springbootdemo.third_tool.kafka;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;

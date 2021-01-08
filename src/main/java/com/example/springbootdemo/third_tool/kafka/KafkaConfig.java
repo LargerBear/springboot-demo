@@ -1,4 +1,4 @@
-package com.example.springbootdemo.kafka;
+package com.example.springbootdemo.third_tool.kafka;
 
 import lombok.Data;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
