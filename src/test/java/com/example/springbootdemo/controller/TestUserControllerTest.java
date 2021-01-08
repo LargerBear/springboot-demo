@@ -1,6 +1,6 @@
 package com.example.springbootdemo.controller;
 
-import com.example.springbootdemo.model.User;
+import com.example.springbootdemo.model.DemoUser;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -10,8 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.annotation.Resource;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Description: </br>
@@ -31,11 +29,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class TestUserControllerTest {
 
     @Resource
-    private User user;
+    private DemoUser user;
 
     @Test
     @GetMapping("/user")
-    public User getUser(){
+    DemoUser getUser(){
         log.info(user.getUserName());
         System.out.println("test");
         return user;
