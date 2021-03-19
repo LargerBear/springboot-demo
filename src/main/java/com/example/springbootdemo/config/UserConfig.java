@@ -13,18 +13,6 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * Description: </br>
- * <p>版权所有：</p>
- * 未经本公司许可，不得以任何方式复制或使用本程序任何部分
- * <p>
- * 杭州孚立计算机软件有限公司
- *
- * @author LargerBear</ br>
- * date: 2020/11/25 9:26</br>
- * @since JDK 1.8
- */
-
-/**
  * 通过注解形式读取配置信息，将该类交由spring容器管理，然后注入即可使用
  *
  * 方式一：添加@ConfigurationProperties注解
@@ -34,9 +22,10 @@ import java.util.Date;
  *
  *
  * @author Administrator
+ * @author Administrator
  */
 @ConditionalOnProperty(name = "user-config", havingValue = "true", matchIfMissing = true)
-/*
+/**
      代表类加载的条件，相似的还有@ConditionalOnBean等等
  */
 @Component

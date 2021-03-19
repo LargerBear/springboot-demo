@@ -1,4 +1,4 @@
-package com.example.springbootdemo.third_tool.async;
+package com.example.springbootdemo.thirdtool.async;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,12 +9,6 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * Description: </br>
- * <p>版权所有：</p>
- * 未经本公司许可，不得以任何方式复制或使用本程序任何部分
- * <p>
- * 杭州孚立计算机软件有限公司
- *
  * @author LargerBear</ br>
  * date: 2021/1/5 15:06</br>
  * @since JDK 1.8

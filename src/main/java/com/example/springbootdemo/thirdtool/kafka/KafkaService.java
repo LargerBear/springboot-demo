@@ -1,4 +1,4 @@
-package com.example.springbootdemo.third_tool.kafka;
+package com.example.springbootdemo.thirdtool.kafka;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
@@ -15,11 +15,6 @@ import javax.annotation.Resource;
 import java.util.*;
 
 /**
- * Description: </br>
- * <p>版权所有：</p>
- * 未经本公司许可，不得以任何方式复制或使用本程序任何部分
- * <p>
- * 杭州孚立计算机软件有限公司
  *
  * @author LargerBear</ br>
  * date: 2020/12/17 14:32</br>
@@ -114,7 +109,7 @@ public class KafkaService {
      * @param record
      * @param topic
      */
-    @KafkaListener(topics = "${kafka.consumer.topic}", groupId = "${kafka.consumer.group-id}")
+//    @KafkaListener(topics = "${kafka.consumer.topic}", groupId = "${kafka.consumer.group-id}")
     public void consumerTask(ConsumerRecord<?, ?> record, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) {
         Optional message = Optional.ofNullable(record.value());
         if (message.isPresent()) {
