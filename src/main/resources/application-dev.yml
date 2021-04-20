@@ -8,6 +8,26 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
+
+
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: false
+      max-connections: 10
+      idle-timeout: 30000
+    user: admin
+    password: admin
+#达梦
+#spring:
+#  datasource:
+#    driver-class-name: dm.jdbc.driver.DmDriver
+#    url: jdbc:dm://localhost:5236/SYSDBA?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8
+#    username: SYSDBA
+#    password: 123456789
+
+
 mybatis:
   type-aliases-package: com.example.springbootdemo.mapper
   mapper-locations: classpath:mapper/*.xml
@@ -23,3 +43,5 @@ server:
     enabled: true
     mime-types: application/javascript,text/css,application/json,application/xml,text/html,text/xml,text/plain
     min-response-size: 2048
+
+

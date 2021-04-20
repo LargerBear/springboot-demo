@@ -6,4 +6,11 @@
         select id, user_name userName, sex, birthday from demo_user where id = #{id}
 
     </select>
+
+<!--达梦-->
+    <!--<select id="selectById" resultType="com.example.springbootdemo.model.DemoUser">
+        select id, user_name userName, sex, birthday from TEST.DEMO_USER where id = #{id}
+
+    </select>-->
+
 </mapper>
