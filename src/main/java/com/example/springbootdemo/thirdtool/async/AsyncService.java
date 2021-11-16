@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * date: 2021/1/8 15:46</br>
  * @since JDK 1.8
  */
-@Component
+//@Component
 @Slf4j
 public class AsyncService {
 

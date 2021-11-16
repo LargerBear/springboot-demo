@@ -13,10 +13,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @SpringBootApplication
 @MapperScan(basePackages = "com.example.springbootdemo.mapper")
-@EnableCaching
-@EnableScheduling
-@EnableAsync
-@EnableJms
+//@EnableCaching
+//@EnableScheduling
+//@EnableAsync
+//@EnableJms
 public class SpringbootDemoApplication {
 
     public static void main(String[] args) {

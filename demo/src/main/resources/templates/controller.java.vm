@@ -1,0 +1,104 @@
+##package ${cfg.controllerPackage};
+package ${package.Controller};
+
+import ${package.Entity}.${entity};
+import ${package.Service}.${table.serviceName};
+##import ${package.Entity}.bo.QueryBO;
+##import ${cfg.extPackagePre}.${cfg.service}.${table.serviceName};
+##import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.springbootdemo.common.R;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
+##import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+
+import java.util.List;
+
+/**
+ * @Package: ${package.Entity}.${entity}
+ * @Description: <$!{table.comment}前端控制器>
+ * @Author: ${author}
+ * @CreateDate: ${date}
+ * @UpdateUser: ${author}
+ * @UpdateDate: ${date}
+ * @UpdateRemark: <>
+ * @Version: 1.0
+ */
+#set($path=${table.name})
+#set($path=$path.concat("path"))
+@RestController
+##@Api(tags = "$!{table.comment}-相关接口")
+@Api(tags = "${entity}-相关接口")
+##@RequestMapping(value = "${cfg.get($path)}", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "${entity}")
+public class ${table.controllerName} {
+
+private static final Logger logger = LoggerFactory.getLogger(${table.controllerName}.class);
+
+@Autowired
+private ${table.serviceName} i${table.serviceName};
+
+@GetMapping("{id}")
+@ApiOperation(value = "$!{table.comment}获取某一实体")
+public R get${table.serviceName}Details(@PathVariable Integer id) {
+        return R.ok(i${table.serviceName}.getById(id));
+        }
+
+
+/**
+  * 列表查询（非分页）
+  *
+  * @return
+  */
+@RequestMapping("/list")
+public R list() {
+    ${entity} model = new  ${entity}();
+        List<${entity}> list =  i${table.serviceName}.list(model);
+        // todo 再包装一层
+        return  R.ok(list);
+        }
+
+
+/**
+* 列表查询（分页）
+*
+* @return
+*/
+@RequestMapping("/pageList")
+public R pageList(Integer pageNum, Integer pageSize) {
+
+    ${entity} model = new  ${entity}();
+        IPage<${entity}> page = i${table.serviceName}.pageList(model, pageNum, pageSize);
+        // todo 再包装一层
+        return R.ok(page);
+        }
+
+@PostMapping
+@ApiOperation(value = "$!{table.comment}新增数据")
+public R save${table.serviceName}(@RequestBody ${entity} dto) {
+        return R.ok(i${table.serviceName}.save(dto));
+        }
+
+@PutMapping("{id}")
+@ApiOperation(value = "$!{table.comment}修改数据")
+public R modify${table.serviceName}(@RequestBody ${entity} dto, @PathVariable Integer id) {
+        dto.setId(id);
+        return R.ok(i${table.serviceName}.updateById(dto)) ;
+        }
+
+@DeleteMapping("batch")
+@ApiOperation(value = "$!{table.comment}批量删除数据")
+public R batchRemove${table.serviceName}(@RequestParam(value = "ids") List<Integer> ids) {
+        return R.ok(i${table.serviceName}.removeByIds(ids)) ;
+        }
+
+@DeleteMapping("{id}")
+@ApiOperation(value = "$!{table.comment}删除数据")
+public R remove${table.serviceName}(@PathVariable Integer id) {
+        return R.ok(i${table.serviceName}.removeById(id)) ;
+        }
+        }

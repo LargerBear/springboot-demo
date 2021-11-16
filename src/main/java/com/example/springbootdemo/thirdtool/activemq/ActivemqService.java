@@ -23,7 +23,7 @@ import javax.jms.Queue;
  * date: 2021/4/20 9:03</br>
  * @since JDK 1.8
  */
-@RestController
+//@RestController
 public class ActivemqService {
 
     @Resource

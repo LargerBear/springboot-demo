@@ -19,8 +19,8 @@ import org.springframework.stereotype.Component;
 /**
  * @author
  */
-@ServerEndpoint("/socket/{userId}")
-@Component
+//@ServerEndpoint("/socket/{userId}")
+//@Component
 @Slf4j
 public class WebSocketService {
 

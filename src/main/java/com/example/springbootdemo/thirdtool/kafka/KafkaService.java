@@ -20,7 +20,7 @@ import java.util.*;
  * date: 2020/12/17 14:32</br>
  * @since JDK 1.8
  */
-@Service
+//@Service
 @Slf4j
 public class KafkaService {
 

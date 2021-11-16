@@ -11,7 +11,7 @@ import java.util.Date;
  * date: 2021/1/7 16:19</br>
  * @since JDK 1.8
  */
-@Component
+//@Component
 @Slf4j
 public class ScheduledService {
 

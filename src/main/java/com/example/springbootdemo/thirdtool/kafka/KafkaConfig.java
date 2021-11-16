@@ -18,8 +18,8 @@ import java.util.Map;
  * date: 2020/12/17 14:28</br>
  * @since JDK 1.8
  */
-@Configuration
-@EnableKafka
+//@Configuration
+//@EnableKafka
 @Data
 public class KafkaConfig {
     @Value("${kafka.broker-list}")

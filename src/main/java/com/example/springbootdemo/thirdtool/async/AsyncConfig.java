@@ -13,8 +13,8 @@ import java.util.concurrent.ThreadPoolExecutor;
  * date: 2021/1/5 15:06</br>
  * @since JDK 1.8
  */
-@EnableAsync
-@Configuration
+//@EnableAsync
+//@Configuration
 public class AsyncConfig {
 
     @Bean
